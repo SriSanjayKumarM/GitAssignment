@@ -1,0 +1,108 @@
+user@DESKTOP-MFEN465 MINGW64 ~/Desktop/git assignment 2
+$ pwd
+/c/Users/user/Desktop/git assignment 2
+
+user@DESKTOP-MFEN465 MINGW64 ~/Desktop/git assignment 2
+$ cd
+
+user@DESKTOP-MFEN465 MINGW64 ~
+$ ^[[200~mkdir my-git-repocd my-git-repo
+bash: $'\E[200~mkdir': command not found
+
+user@DESKTOP-MFEN465 MINGW64 ~
+$ mkdir my-git-repocd my-git-repo
+
+user@DESKTOP-MFEN465 MINGW64 ~
+$ git init
+Initialized empty Git repository in C:/Users/user/.git/
+
+user@DESKTOP-MFEN465 MINGW64 ~ (master)
+$ touch feature1.txt feature2.txt
+
+user@DESKTOP-MFEN465 MINGW64 ~ (master)
+$ git add feature1.txt feature2.txt
+
+user@DESKTOP-MFEN465 MINGW64 ~ (master)
+$ git commit -m "feature1 and 2"
+[master (root-commit) 50544db] feature1 and 2
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 feature1.txt
+ create mode 100644 feature2.txt
+
+user@DESKTOP-MFEN465 MINGW64 ~ (master)
+$ git checkout master
+Already on 'master'
+
+user@DESKTOP-MFEN465 MINGW64 ~ (master)
+$ git checkout -b develop
+Switched to a new branch 'develop'
+
+user@DESKTOP-MFEN465 MINGW64 ~ (develop)
+$ git checkout -b feature1
+Switched to a new branch 'feature1'
+
+user@DESKTOP-MFEN465 MINGW64 ~ (feature1)
+$ git checkout -b feature2
+Switched to a new branch 'feature2'
+
+user@DESKTOP-MFEN465 MINGW64 ~ (feature2)
+$ git branch
+  develop
+  feature1
+* feature2
+  master
+
+user@DESKTOP-MFEN465 MINGW64 ~ (feature2)
+$ git checkout develop
+Switched to branch 'develop'
+
+user@DESKTOP-MFEN465 MINGW64 ~ (develop)
+$ touch develop.txt
+
+user@DESKTOP-MFEN465 MINGW64 ~ (develop)
+$ git add develop.txt
+
+user@DESKTOP-MFEN465 MINGW64 ~ (develop)
+$ git commit -m "added develop text file"
+[develop 160906f] added develop text file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 develop.txt
+
+user@DESKTOP-MFEN465 MINGW64 ~ (develop)
+$ git checkout feature1
+Switched to branch 'feature1'
+
+user@DESKTOP-MFEN465 MINGW64 ~ (feature1)
+$ touch new.txt
+
+user@DESKTOP-MFEN465 MINGW64 ~ (feature1)
+$ git add new.txt
+
+user@DESKTOP-MFEN465 MINGW64 ~ (feature1)
+$ git commit -m "added new text file"
+[feature1 d39a057] added new text file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.txt
+
+user@DESKTOP-MFEN465 MINGW64 ~ (feature1)
+$ git checkout develop
+Switched to branch 'develop'
+
+user@DESKTOP-MFEN465 MINGW64 ~ (develop)
+$ touch demo.txt
+
+user@DESKTOP-MFEN465 MINGW64 ~ (develop)
+$ git add demo.txt
+
+user@DESKTOP-MFEN465 MINGW64 ~ (develop)
+$ git commit -m "Added demo text file in develop"
+[develop 911fa76] Added demo text file in develop
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 demo.txt
+
+user@DESKTOP-MFEN465 MINGW64 ~ (develop)
+$ git checkout master
+Switched to branch 'master'
+
+user@DESKTOP-MFEN465 MINGW64 ~ (master)
+$
